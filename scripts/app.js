@@ -1,4 +1,4 @@
-const user1 = prompt('please enter your type among * and +', '*');
+// const user1 = prompt('please enter your type among * and +', '*');
 
 let user2;
 

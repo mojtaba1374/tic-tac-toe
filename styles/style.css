@@ -13,8 +13,43 @@ html, body {
     margin: auto;
     background-color: #192a32;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
+}
+
+.header-app {
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-app .shaped {
+    font-size: 30px;
+}
+
+.header-app .shaped :first-child {
+    color: #f2b237;
+}
+
+.header-app .shaped :last-child {
+    color: #2fc4be;
+}
+
+.header-app .active-user,
+.header-app .replay-game {
+    width: 55px;
+    background-color: #254555;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    color: #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-app .replay-game:hover {
+    background-color: #468baa;
 }
 
 .game-box {
@@ -35,10 +70,44 @@ html, body {
     background-color: #1f3540;
     display: inline-block;
     border-radius: 12px;
-    box-shadow: 2px 6px 3px #152025;
+    box-shadow: 6px 6px 3px #152025;
     transition: all 0.3s ease-out;
 }
 
 .game-box-item:hover {
     background-color: #254555;
+}
+
+.score-game {
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score-game button {
+    width: 75px;
+    padding: 10px 5px;
+    border: none;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.score-game button p {
+    font-weight: bolder;
+    margin: 0;
+    padding: 5px;
+}
+
+.score-game button:nth-of-type(1) {
+    background-color: #2fc4be;
+}
+
+.score-game button:nth-of-type(2) {
+    background-color: #ccc;
+}
+
+.score-game button:nth-of-type(3) {
+    background-color: #f2b237;
 }
