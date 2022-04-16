@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: #192a32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.exist-shapes {
+    margin: 20px;
+}
+
+.exist-shapes :first-child {
+    font-size: 30px;
+    color: #f2b237;
+}
+
+.exist-shapes :last-child {
+    font-size: 30px;
+    color: #2fc4be;
+}
+
+.login-box {
+    color: #ccc;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 4px #111a1f;
+    padding: 10px 0;
+    background-color: #1f3540;
+}
+
+.picker-shape {
+    width: 75%;
+    margin: auto;
+    background-color: #192a32;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box h4 {
+    color: gray;
+}
+
+.login-box .x-shape,
+.login-box .o-shape {
+    background-color: #2d5364;
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    padding: auto 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.x-shape {
+    color: #f2b237;
+}
+
+.x-shape:hover {
+    background-color: #ccc;
+    color: #192a32;
+}
+
+.o-shape {
+    color: #2fc4be;
+}
+
+.o-shape:hover {
+    background-color: #ccc;
+    color: #192a32;
+}
+
+.pick-rival {
+    width: 100%;
+    margin-top: 30px;
+    /* margin: auto; */
+}
+
+.pick-rival button {
+    display: block;
+    width: 300px;
+    padding: 10px 15px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bolder;
+}
+
+.pick-rival :first-child {
+    background-color: #f2b237;
+    box-shadow: 3px 3px 3px #aa8238;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.pick-rival :first-child:hover {
+    background-color: #aa8238;
+    color: #192a32;
+}
+
+.pick-rival :last-child {
+    background-color: #2fc4be;
+    box-shadow: 2px 2px 2px #2a9e9a;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.pick-rival :last-child:hover {
+    background-color: #2a9e9a;
+    color: #192a32;
+}
