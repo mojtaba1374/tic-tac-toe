@@ -20,7 +20,7 @@ const xMarkButtonClickHandler = () => {
 
 const oMarkButtonClickHandler = () => {
     xMarkButton.style['background-color'] = '#2d5364';
-    xMarkButton.style.color = '#2fc4be';
+    xMarkButton.style.color = '#f2b237';
     oMarkButton.style['background-color'] = '#2fc461';
     oMarkButton.style.color = '#192a32';
     player1Mark = 'o';
@@ -34,15 +34,15 @@ oMarkButton.addEventListener('click', oMarkButtonClickHandler);
 
 let pickePlayerType;
 
-const pickrivalContainer = document.querySelectorAll('.pick-rival button');
+const cpuRivalButton = document.querySelector('.pick-rival :first-child');
+const userRivalButton = document.querySelector('.pick-rival :last-child');
 
-console.log(pickrivalContainer);
-
-for (const button of pickrivalContainer) {
-    button.addEventListener('click', event => {
-        let playerType = event.target.textContent.trim().replace('New Game VS ', '');
-        pickePlayerType = playerType;
-        localStorage.setItem('pickeRivalType', pickePlayerType);
-    });
-}
-
+userRivalButton.addEventListener('click', event => {
+    let playerType = event.target.textContent.trim().replace('New Game VS ', '');
+    pickePlayerType = playerType;
+    localStorage.setItem('pickeRivalType', pickePlayerType);
+    console.log('clicked');
+    if(player1Mark) {
+        location.href = location.origin + '/pages/game.html';
+    }
+});

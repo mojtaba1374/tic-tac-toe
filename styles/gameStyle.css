@@ -88,6 +88,7 @@ html, body {
 
 .score-game button {
     width: 75px;
+    height: 60px;
     padding: 10px 5px;
     border: none;
     font-weight: bolder;
