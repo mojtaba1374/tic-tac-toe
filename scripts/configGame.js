@@ -13,9 +13,9 @@ const xMarkButtonClickHandler = () => {
     xMarkButton.style['background-color'] = '#2fc461';
     xMarkButton.style.color = '#192a32';
     player1Mark = 'x';
-    player2Mark = 'o';
+    // player2Mark = 'o';
     localStorage.setItem('player1Mark', player1Mark);
-    localStorage.setItem('player2Mark', player2Mark);
+    // localStorage.setItem('player2Mark', player2Mark);
 };
 
 const oMarkButtonClickHandler = () => {
@@ -24,9 +24,9 @@ const oMarkButtonClickHandler = () => {
     oMarkButton.style['background-color'] = '#2fc461';
     oMarkButton.style.color = '#192a32';
     player1Mark = 'o';
-    player2Mark = 'x';
+    // player2Mark = 'x';
     localStorage.setItem('player1Mark', player1Mark);
-    localStorage.setItem('player2Mark', player2Mark);
+    // localStorage.setItem('player2Mark', player2Mark);
 };
 
 xMarkButton.addEventListener('click', xMarkButtonClickHandler);

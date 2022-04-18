@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+.test5 {
+    padding: 0;
+    margin: 0;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -54,7 +59,7 @@ html, body {
 
 .game-box {
     width: 300px;
-    margin: auto;
+    height: 300px;
     text-align: center;
     /* padding: 10px; */
     /* border: 1px solid white; */
@@ -73,6 +78,22 @@ html, body {
     box-shadow: 6px 6px 3px #152025;
     transition: all 0.3s ease-out;
 }
+
+.game-box-item div {
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    /* padding-top: 16px; */
+}
+
+.game-box-item .fa-dot-circle-o {
+    color: #f2b237;
+}
+
+.game-box-item .fa-close {
+    color: #2fc4be;
+}
+
 
 .game-box-item:hover {
     background-color: #254555;
