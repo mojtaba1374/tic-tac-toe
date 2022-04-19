@@ -24,13 +24,37 @@ const replayeBtnClickHandler = () => {
 
 replayGameBtn.addEventListener('click', replayeBtnClickHandler);
 
-let gameArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let gameArray = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
 
-// const diagnoseWinner = () => {
-//     if(gameArray)
-// }
+let numberPicked = 0;
+
+const checkWinnerAllRows = (chr) => {
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if(gameArray[i][j] !== chr) {
+                break;
+            }
+        }
+        return i;
+    }
+    return -1; // show winner not exist in i row
+};
+
+const pickWinnerUser = (markType) => {
+    if(numberPicked < 5) {
+        return;
+    }
+    
+    let rowWinner = checkWinnerAllRows(markType);
+    if(rowWinner !== -1) {
+        console.log(rowWinner);
+    }
+};
 
 const boxClickedHandler = event => {
+    numberPicked++;
+    let markType = activeUser ? 'x' : 'o';
+
     // Update active user btn in header app
     if (activeUser && user1) {
         activeUserBtn.innerHTML = '<i class="fa fa-dot-circle-o"></i> Turn';
@@ -42,40 +66,13 @@ const boxClickedHandler = event => {
     activeUser = !activeUser;
 
     // create gameArray and update it with x and o
-    let markType = activeUser ? 'o' : 'x';
-    console.log(markType);
-    btnClickedId = event.target.id;
-    switch (btnClickedId) {
-        case '1':
-            gameArray[0][0] = markType;
-            break;
-        case '2':
-            gameArray[0][1] = markType;
-            break;
-        case '3':
-            gameArray[0][2] = markType;
-            break;
-        case '4':
-            gameArray[1][0] = markType;
-            break;
-        case '5':
-            gameArray[1][1] = markType;
-            break;
-        case '6':
-            gameArray[1][2] = markType;
-            break;
-        case '7':
-            gameArray[2][0] = markType;
-            break;
-        case '8':
-            gameArray[2][1] = markType;
-            break;
-        case '9':
-            gameArray[2][2] = markType;
-            break;
-        default:
-            break;
-    }
+    let btnClickedId = event.target.id;
+    let rowId = btnClickedId[0];
+    let colId = btnClickedId[1];
+    gameArray[rowId][colId] = markType;
+
+    //run nelow function for recogonize winner
+    pickWinnerUser(markType);
     event.currentTarget.removeEventListener('click', boxClickedHandler);
 };
 
