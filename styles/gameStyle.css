@@ -22,9 +22,17 @@ html, body {
     align-items: center;
 }
 
+.app {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .header-app {
-    width: 80%;
-    margin: 25px auto;
+    width: 230px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +69,9 @@ html, body {
     width: 300px;
     height: 300px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* padding: 10px; */
     /* border: 1px solid white; */
     color: white;
@@ -73,17 +84,17 @@ html, body {
     font-size: 20px;
     color: white;
     background-color: #1f3540;
-    display: inline-block;
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
     box-shadow: 6px 6px 3px #152025;
     transition: all 0.3s ease-out;
 }
 
-.game-box-item div {
+.game-box-item i {
     font-size: 30px;
-    display: block;
-    margin: auto;
-    /* padding-top: 16px; */
 }
 
 .game-box-item .fa-dot-circle-o {
@@ -100,8 +111,8 @@ html, body {
 }
 
 .score-game {
-    width: 80%;
-    margin: 25px auto;
+    width: 230px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
