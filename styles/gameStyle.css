@@ -32,7 +32,6 @@ html, body {
 
 .header-app {
     width: 230px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,31 +64,50 @@ html, body {
     background-color: #468baa;
 }
 
-.game-box {
-    width: 300px;
-    height: 300px;
-    text-align: center;
+.game-box-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 10px; */
-    /* border: 1px solid white; */
+}
+
+.game-box {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    text-align: center;
     color: white;
+
 }
 
 .game-box-item {
+    float: left;
     width: 70px;
     height: 70px;
     margin: 6px;
     font-size: 20px;
     color: white;
     background-color: #1f3540;
-    /* display: inline-block; */
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
     box-shadow: 6px 6px 3px #152025;
+    transition: all 0.3s ease-out;
+}
+
+.game-box-item-winned {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 6px;
+    font-size: 20px;
+    color: white;
+    background-color: #2fc461;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 6px 6px 3px #1f3540;
     transition: all 0.3s ease-out;
 }
 
@@ -101,10 +119,14 @@ html, body {
     color: #f2b237;
 }
 
+.game-box-item-winned .fa-dot-circle-o,
+.game-box-item-winned .fa-close {
+    color: #192a32;
+}
+
 .game-box-item .fa-close {
     color: #2fc4be;
 }
-
 
 .game-box-item:hover {
     background-color: #254555;
@@ -112,16 +134,16 @@ html, body {
 
 .score-game {
     width: 230px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .score-game button {
-    width: 75px;
+    width: 70px;
     height: 60px;
     padding: 10px 5px;
+    margin: 0 10px;
     border: none;
     font-weight: bolder;
     border-radius: 10px;
@@ -143,4 +165,58 @@ html, body {
 
 .score-game button:nth-of-type(3) {
     background-color: #f2b237;
+}
+
+.backdrop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #304e5f62;
+    z-index: 50;
+}
+
+.modal-winner {
+    display: none;
+    width: 300px;
+    background-color: #1d2c35ea;
+    margin: auto;
+    padding: 15px 0;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    z-index: 100;
+}
+
+.modal-winner p {
+    font-size: 1.25em;
+    color: #2fc4be;
+}
+
+.modal-winner button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-winner button:nth-of-type(1) {
+    background-color: #a9becb;
+    box-shadow: 2px 2px 1px #828d94;
+}
+
+.modal-winner button:nth-of-type(1):hover {
+    background-color: #8a9399;
+    box-shadow: 2px 2px 1px #8a9399;
+}
+
+.modal-winner button:nth-of-type(2) {
+    background-color: #f2b237;
+    box-shadow: 2px 2px 2px #be913c;
+}
+
+.modal-winner button:nth-of-type(2):hover {
+    background-color: #b8924d;
+    box-shadow: 2px 2px 2px #b8924d;
 }
