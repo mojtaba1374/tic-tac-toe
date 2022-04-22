@@ -13,14 +13,31 @@ const gameBoxs = document.querySelectorAll('.game-box-item');
 const activeUserBtn = document.querySelector('.active-user');
 let activeUser = true; // if activeUser variable is true, therefore x user is active.
 
-
 // replay from first that user's pick X or O mark so that two user soccer is zero.
 const replayGameBtn = document.querySelector('.replay-game');
 
+//  Restart Button Handler
+const restartModal = document.querySelector('.restart-modal');
+const restartBackdrop = document.querySelector('.restart-backdrop');
+const cancelRestartBtn = restartModal.querySelector('button:nth-of-type(1)');
+const doneRestartBtn = restartModal.querySelector('button:nth-of-type(2)');
+
 const replayeBtnClickHandler = () => {
-    console.log('clicked');
+    restartModal.style.display = 'block';
+    restartBackdrop.style.display = 'block';
+};
+
+const cancelRestartBtnHanler = () => {
+    restartModal.style.display = 'none';
+    restartBackdrop.style.display = 'none';
+};
+
+const doneRestartBtnHanler = () => {
     history.back();
 };
+
+cancelRestartBtn.addEventListener('click', cancelRestartBtnHanler);
+doneRestartBtn.addEventListener('click', doneRestartBtnHanler);
 
 replayGameBtn.addEventListener('click', replayeBtnClickHandler);
 

@@ -2,7 +2,7 @@
 localStorage.clear();
 
 let player1Mark;
-let player2Mark;
+let pickePlayerType;
 
 const xMarkButton = document.querySelector('.x-shape');
 const oMarkButton = document.querySelector('.o-shape');
@@ -28,7 +28,6 @@ const oMarkButtonClickHandler = () => {
 xMarkButton.addEventListener('click', xMarkButtonClickHandler);
 oMarkButton.addEventListener('click', oMarkButtonClickHandler);
 
-let pickePlayerType;
 
 const cpuRivalButton = document.querySelector('.pick-rival :first-child');
 const userRivalButton = document.querySelector('.pick-rival :last-child');
